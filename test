@@ -7,6 +7,7 @@ cd ~/config
 git clone https://github.com/sorathpanzer/home-manager.git
 #nix-daemon
 #export NIX_REMOTE=daemon
+source /etc/bashrc
 nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz home-manager
 nix-channel --add https://nixos.org/channels/nixos-23.05 nixpkgs
 nix-channel --update
