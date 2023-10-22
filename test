@@ -1,13 +1,14 @@
 #/bin/sh
 
-sudo apt update; sudo apt upgrade
-sudo apt install xz-utils
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 . $HOME/.nix-profile/etc/profile.d/nix.sh
+mkdir ~/config
+cd ~/config
+git clone https://github.com/sorathpanzer/home-manager.git
+#nix-daemon
+#export NIX_REMOTE=daemon
 nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz home-manager
 nix-channel --add https://nixos.org/channels/nixos-23.05 nixpkgs
 nix-channel --update
 nix-shell '<home-manager>' -A install
-cd .config
-git clone https://github.com/sorathpanzer/home-manager.git
 home-manager switch
