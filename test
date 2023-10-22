@@ -4,5 +4,6 @@ sudo apt update; sudo apt upgrade
 sudo apt install xz-utils
 sh <(curl -L https://nixos.org/nix/install) --daemon
 nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz home-manager
+nix-channel --add https://nixos.org/channels/nixos-23.05 nixpkgs
 nix-channel --update
-#nix-channel --add https://nixos.org/channels/nixos-23.05 nixpkgs
+nix-shell '<home-manager>' -A install
