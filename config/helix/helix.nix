@@ -1,7 +1,25 @@
 { pkgs, config, ... }:
 
+let
+user-scripts = pkgs.stdenv.mkDerivation rec{
+  pname = "user-scripts";
+  version = "1.0";
+  src = ./snippets;
+  phases = "installPhase fixupPhase";
+  installPhase = ''
+    mkdir -p $out/bin
+    cp ${src}/* $out/bin
+    chmod +x $out/bin/*
+  '';
+  };
+in
+
 {
-  
+
+home.packages = [
+  user-scripts
+];
+
 programs.helix = {
   enable = true;
   themes = {
@@ -85,9 +103,22 @@ programs.helix = {
       d = [":clipboard-yank" "delete_selection"];
       k = "replay_macro";
       K = "record_macro";
+      F1 = "goto_line_start";
+      F2 = "goto_line_end";
+    };
+    keys.select."space" = { 
+      g = "goto_last_line";  
+    };
+    keys.select."+" = {
+      "+" = "toggle_comments";
     };
     keys.normal."+" = {
       "+" = "toggle_comments";
+    };
+    keys.normal.h = {
+      d = [":insert-output date" "collapse_selection" "insert_at_line_end"];
+      h = [":append-output ~/.nix-profile/bin/home-manager-homefile" "collapse_selection" "insert_at_line_end"];
+      p = [":append-output ~/.nix-profile/bin/home-manager-programs" "collapse_selection" "insert_at_line_end"];
     };
     keys.normal."space" = {
       y = ["extend_line_below" ":clipboard-yank"];
@@ -110,5 +141,5 @@ home.file = {
     language-server = { command = "${pkgs.nodePackages.bash-language-server}/bin/bash-language-server", args = ["start"] }
 '';
 };
-  
+
 }

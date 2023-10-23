@@ -2,8 +2,6 @@
 
 {
 
-# programs.imv.enable = true;
-
 home.file = {
   ".config/imv/config".text = ''
 [options]

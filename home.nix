@@ -2,9 +2,18 @@
 
 {
   imports = [
-    ./apps/mpv.nix
-    ./apps/imv.nix
-    ./apps/helix.nix
+    ./config/mpv.nix
+    ./config/imv.nix
+    ./config/helix/helix.nix
+    ./config/foot.nix
+    ./config/tig.nix
+    ./config/keepassxc.nix
+    ./config/tofi.nix
+    ./config/dunst/dunst.nix
+ 
+    ./config/yazi/keymap.toml.nix
+    ./config/yazi/theme.toml.nix
+    ./config/yazi/yazi.toml.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
