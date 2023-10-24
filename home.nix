@@ -10,6 +10,8 @@
     ./config/keepassxc.nix
     ./config/tofi.nix
     ./config/dunst/dunst.nix
+    ./config/zathura.nix
+    ./config/profile.nix
  
     ./config/yazi/keymap.toml.nix
     ./config/yazi/theme.toml.nix

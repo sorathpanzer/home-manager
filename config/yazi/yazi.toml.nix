@@ -30,6 +30,9 @@ open = [
 	{ exec = 'open "$@"',                 desc = "Open", for = "macos" },
 	{ exec = 'start "%1"', orphan = true, desc = "Open", for = "windows" }
 ]
+img = [
+	{ exec = 'hyprimv "$@"',             desc = "Open", for = "linux" },
+]
 reveal = [
 	{ exec = 'open -R "$1"',                       desc = "Reveal", for = "macos" },
 	{ exec = 'explorer /select,%1', orphan = true, desc = "Reveal", for = "windows" },
@@ -50,7 +53,7 @@ rules = [
 	{ name = "*/", use = [ "edit", "open", "reveal" ] },
 
 	{ mime = "text/*",  use = [ "edit", "reveal" ] },
-	{ mime = "image/*", use = [ "open", "reveal" ] },
+	{ mime = "image/*", use = [ "img", "reveal" ] },
 	{ mime = "video/*", use = [ "play", "reveal" ] },
 	{ mime = "audio/*", use = [ "play", "reveal" ] },
 	{ mime = "inode/x-empty", use = [ "edit", "reveal" ] },
