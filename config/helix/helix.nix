@@ -93,9 +93,11 @@ programs.helix = {
       x = ["extend_to_line_bounds" "select_mode"];
       A-c = ["move_next_word_end" "move_prev_word_start" "change_selection"];
       C = ["move_next_long_word_end" "move_prev_long_word_start" "change_selection"];
-      C-down = "jump_forward";
-      C-up = "jump_backward";
+      A-down = "jump_forward";
+      A-up = "jump_backward";
       "º" = "save_selection";
+      C-down = "copy_selection_on_next_line";
+      C-up = "copy_selection_on_prev_line";
     };
     keys.select = {
       y = [":clipboard-yank" "yank" "collapse_selection" "normal_mode"];
@@ -105,6 +107,8 @@ programs.helix = {
       K = "record_macro";
       F1 = "goto_line_start";
       F2 = "goto_line_end";
+      C-down = "copy_selection_on_next_line";
+      C-up = "copy_selection_on_prev_line";
     };
     keys.select."space" = { 
       g = "goto_last_line";  

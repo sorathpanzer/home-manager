@@ -23,11 +23,7 @@
     ./config/zsh/plugins/fzf.nix
     ./config/zsh/plugins/sudo.nix
     ./config/zsh/plugins/unicode.nix
-    ./config/zsh/scripts/dot.nix
-    ./config/zsh/scripts/functions.nix
-    ./config/zsh/scripts/pkg.nix
-    ./config/zsh/scripts/syncpac.nix
-    ./config/zsh/scripts/vm.nix
+    ./config/zsh/functions.nix
   ];
 
   }

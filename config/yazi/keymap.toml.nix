@@ -47,7 +47,7 @@
     ], desc = "Copy the name of the file without ext" },
 
     { on = [ "*" ],             exec = "shell --block --confirm 'chmod +x $1'",  desc = "chmod file" },
-    { on = [ "º" ],             exec = "shell --block --confirm '${pkgs.dua}/bin/dua i'",  desc = "View size with Dua" },
+    { on = [ "º" ],             exec = "shell --block --confirm '${pkgs.btop}/bin/btop'",  desc = "View size with Dua" },
     { on = [ "b", "g" ],        exec = "shell --block --confirm '${pkgs.swww}/bin/swww img $1'",  desc = "Set background" },
     { on = [ "d", "d" ],        exec = "shell --block --confirm '${pkgs.trash-cli}/bin/trash-put \"$@\"'", desc = "Move the files to the trash" },
     { on = [ "D" ],         exec = [ "remove --permanently", "escape --visual --select" ], desc = "Permanently delete the files" },

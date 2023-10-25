@@ -7,21 +7,20 @@ programs.zsh = {
   enableAutosuggestions = true;
   enableCompletion = true;
   # syntaxHighlighting.enable = true;
+  dotDir = ".config/zsh";
   autocd = true;
   history.path = ".cache/zsh/history";
-  dotDir = ".config/zsh";
   shellAliases = {
     ls="ls --color=auto --group-directories-first";
-    fzf="fzf -m";
-    tg="cd $HOME/.config/dotgit; tig; cd -";
+    fzf="${pkgs.fzf}/bin/fzf -m";
+    tg="cd $HOME/.config/dotgit; ${pkgs.tig}/bin/tig; cd -";
     du="du -h -d 1 . 2>/dev/null | sort -h -r";
     xpg="gpg -c --no-symkey-cache --cipher-algo AES256";
-    vim="nvim";
-    box="toolbox run";
-    tig="tig status";
-    check="shellcheck --shell=bash --exclude=SC2086,SC2016,SC1091";
-    nx="nvd diff /nix/var/nix/profiles/$(ls /nix/var/nix/profiles/ | tail -n 3 | head -n 1) /nix/var/nix/profiles/$(ls /nix/var/nix/profiles/ | tail -n 2 | head -n 1)";
-    dua="dua i";
+    vim="${pkgs.neovim}/bin/nvim";
+    tig="${pkgs.tig}/bin/tig status";
+    check="${pkgs.shellcheck}/bin/shellcheck --shell=bash --exclude=SC2086,SC2016,SC1091";
+    nx="${pkgs.nvd}/bin/nvd diff /nix/var/nix/profiles/$(ls /nix/var/nix/profiles/ | tail -n 3 | head -n 1) /nix/var/nix/profiles/$(ls /nix/var/nix/profiles/ | tail -n 2 | head -n 1)";
+    dua="${pkgs.dua}/bin/dua i";
     grep="grep -i";
   };
 };
@@ -35,10 +34,6 @@ home.file = {
   unset zle_bracketed_paste
 
   source ~/.config/zsh/scripts/functions
-  source ~/.config/zsh/scripts/pkg
-  source ~/.config/zsh/scripts/syncpac
-  source ~/.config/zsh/scripts/vm
-  source ~/.config/zsh/scripts/dot
 
   autoload -U colors && colors
   setopt PROMPT_SUBST
@@ -83,6 +78,12 @@ home.file = {
   #source ~/.config/zsh/plugins/fancy-ctrl-z.plugin.zsh
   #source ~/.config/zsh/plugins/zsh-autosuggestions.zsh 2>/dev/null
 '';
+};
+
+home.file = {
+  ".config/zsh/.zprofile".text = ''
+    source .profile
+  '';
 };
 
 }

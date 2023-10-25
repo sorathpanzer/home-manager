@@ -6,44 +6,25 @@
   ];
 
   nixpkgs.overlays = [ (import ./overlays.nix) ];
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
+
   home.username = "sorath";
   home.homeDirectory = "/home/sorath";
+  home.stateVersion = "23.05";
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "23.05"; # Please read the comment before changing.
-
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
   home.packages = with pkgs; [
-  # yazi # For some reason unstable overlay make this package fail to open
-  imv
-  keepassxc
-  stow
-  tig
-  tofi
-  zsh-syntax-highlighting
+  imv fzf keepassxc tofi git swww neovim #yazi
+  
+  # zsh-syntax-highlighting nodePackages.bash-language-server mediainfo trash-cli 
+  # unar exiftool shellcheck fzf nvd sanoid tig dunst helix zsh foot mpv zathura
+  # wl-clipboard fwupd clamav bc
 
-  nodePackages.bash-language-server
-  mediainfo
-  trash-cli
-  unar
-  exiftool
-  dua
-  swww
+  # stow (DEPRECATED)
+  # yazi is referenced in zsh functions
   ];
 
   home.sessionVariables = {
     EDITOR = "hx";
   };
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

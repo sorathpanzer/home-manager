@@ -3,14 +3,8 @@
 {
 
 home.file = {
-  ".zprofile".text = ''
-    source .profile
-  '';
-};
-
-home.file = {
   ".profile".text = ''
-    #!/bin/bash
+    #!/bin/sh
 
     RELEASE=$(cat /etc/os-release | grep ^NAME= | cut -d '=' -f2 | awk '{print $1}' | tr -d '"')
     if [ $RELEASE = AlmaLinux ] || [ $RELEASE = Rocky ] || [ $RELEASE = CentOS ] || [ $RELEASE = Artix ] || [ $RELEASE = Debian ]; then
