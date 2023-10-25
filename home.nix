@@ -30,13 +30,12 @@
   tig
   tofi
   zsh-syntax-highlighting
-  
+
   nodePackages.bash-language-server
   mediainfo
   trash-cli
   unar
   exiftool
-  libnotify
   dua
   swww
   ];

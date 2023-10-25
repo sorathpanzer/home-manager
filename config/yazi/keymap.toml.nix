@@ -27,22 +27,22 @@
     ],  desc = "Stow a file or folder" },
 
     { on = [ "c", "p" ], exec = [ 
-    "shell --block --confirm '${pkgs.libnotify}/bin/notify-send -t 1000 \"Path copied\"'", 
+    "shell --block --confirm '${pkgs.dunst}/bin/dunstify -t 1000 \"Path copied\"'", 
     "copy path"
     ], desc = "Copy the absolute path" },
 
     { on = [ "c", "d" ], exec = [ 
-    "shell --block --confirm '${pkgs.libnotify}/bin/notify-send -t 1000 \"Parent path copied\"'", 
+    "shell --block --confirm '${pkgs.dunst}/bin/dunstify -t 1000 \"Parent path copied\"'", 
     "copy dirname"
     ], desc = "Copy the parent path" },
 
     { on = [ "c", "f" ], exec = [ 
-    "shell --block --confirm '${pkgs.libnotify}/bin/notify-send -t 1000 \"Name of the file copied\"'", 
+    "shell --block --confirm '${pkgs.dunst}/bin/dunstify -t 1000 \"Name of the file copied\"'", 
     "copy filename"
     ], desc = "Copy the name of the file" },
 
     { on = [ "c", "n" ], exec = [ 
-    "shell --block --confirm '${pkgs.libnotify}/bin/notify-send -t 1000 \"Name of the file -ext copied\"'", 
+    "shell --block --confirm '${pkgs.dunst}/bin/dunstify -t 1000 \"Name of the file -ext copied\"'", 
     "copy name_without_ext"
     ], desc = "Copy the name of the file without ext" },
 

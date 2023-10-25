@@ -5,6 +5,7 @@
     ./config/mpv.nix
     ./config/imv.nix
     ./config/helix/helix.nix
+    ./config/dunst/dunst.nix
     ./config/foot.nix
     ./config/tig.nix
     ./config/keepassxc.nix
