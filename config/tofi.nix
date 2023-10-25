@@ -42,6 +42,17 @@ hint-font = false
 history = true
 history-file = ~/.cache/history
 '';
+  ".config/tofi/assets/appmenu".text = ''
+  calibre
+  fragments
+  libreoffice
+  logseq
+  metatrader
+  popcorntime
+  signal-desktop
+  steam
+  Wapp
+'';
 };
 
 }

@@ -2,21 +2,10 @@
 
 {
   imports = [
-    ./config/mpv.nix
-    ./config/imv.nix
-    ./config/helix/helix.nix
-    ./config/foot.nix
-    ./config/tig.nix
-    ./config/keepassxc.nix
-    ./config/tofi.nix
-    ./config/dunst/dunst.nix
-    ./config/zathura.nix
-    ./config/profile.nix
- 
-    ./config/yazi/keymap.toml.nix
-    ./config/yazi/theme.toml.nix
-    ./config/yazi/yazi.toml.nix
+      ./imports.nix
   ];
+
+  nixpkgs.overlays = [ (import ./overlays.nix) ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "sorath";
@@ -34,6 +23,22 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+  # yazi # For some reason unstable overlay make this package fail to open
+  imv
+  keepassxc
+  stow
+  tig
+  tofi
+  zsh-syntax-highlighting
+  
+  nodePackages.bash-language-server
+  mediainfo
+  trash-cli
+  unar
+  exiftool
+  libnotify
+  dua
+  swww
   ];
 
   home.sessionVariables = {
