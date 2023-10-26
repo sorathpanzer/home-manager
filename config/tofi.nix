@@ -46,12 +46,10 @@ history-file = ~/.cache/history
   calibre
   fragments
   libreoffice
-  logseq
   metatrader
   popcorntime
   signal-desktop
-  steam
-  Wapp
+  Wtf
 '';
 };
 

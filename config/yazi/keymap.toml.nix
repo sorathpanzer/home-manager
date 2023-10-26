@@ -52,7 +52,7 @@
     { on = [ "d", "d" ],        exec = "shell --block --confirm '${pkgs.trash-cli}/bin/trash-put \"$@\"'", desc = "Move the files to the trash" },
     { on = [ "D" ],         exec = [ "remove --permanently", "escape --visual --select" ], desc = "Permanently delete the files" },
     { on = [ "d", "r" ],        exec = "shell --block --confirm '${pkgs.trash-cli}/bin/trash-restore'", desc = "Restore files from trash" },
-    { on = [ "d", "c" ],        exec = "shell --block --confirm '${pkgs.trash-cli}/bin/trash-empty -f; paplay /home/sorath/.local/bin/aassets/trash-empty.oga'", desc = "Clean files from trash" },
+    { on = [ "d", "c" ],        exec = "shell --block --confirm '${pkgs.trash-cli}/bin/trash-empty -f; paplay ~/.sounds/trash-empty.ogg'", desc = "Clean files from trash" },
 
     { on = [ "z", "n" ],        exec = [
     "shell --block --confirm 'mount /media/Bunker/Vault; mount /media/Bunker/Crypta'",

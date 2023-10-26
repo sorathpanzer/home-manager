@@ -13,15 +13,15 @@ programs.zsh = {
   shellAliases = {
     ls="ls --color=auto --group-directories-first";
     fzf="${pkgs.fzf}/bin/fzf -m";
-    tg="cd $HOME/.config/dotgit; ${pkgs.tig}/bin/tig; cd -";
+    tg="cd $HOME/.config/dotgit; ${pkgs.tig}/bin/tig status; cd -";
     du="du -h -d 1 . 2>/dev/null | sort -h -r";
     xpg="gpg -c --no-symkey-cache --cipher-algo AES256";
-    vim="${pkgs.neovim}/bin/nvim";
     tig="${pkgs.tig}/bin/tig status";
     check="${pkgs.shellcheck}/bin/shellcheck --shell=bash --exclude=SC2086,SC2016,SC1091";
     nx="${pkgs.nvd}/bin/nvd diff /nix/var/nix/profiles/$(ls /nix/var/nix/profiles/ | tail -n 3 | head -n 1) /nix/var/nix/profiles/$(ls /nix/var/nix/profiles/ | tail -n 2 | head -n 1)";
     dua="${pkgs.dua}/bin/dua i";
     grep="grep -i";
+    gparted="sudo -E gparted";
   };
 };
 

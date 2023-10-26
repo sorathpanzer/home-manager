@@ -98,6 +98,7 @@ programs.helix = {
       "º" = "save_selection";
       C-down = "copy_selection_on_next_line";
       C-up = "copy_selection_on_prev_line";
+      ";" = ":run-shell-command";
     };
     keys.select = {
       y = [":clipboard-yank" "yank" "collapse_selection" "normal_mode"];
@@ -123,6 +124,7 @@ programs.helix = {
       d = [":insert-output date" "collapse_selection" "insert_at_line_end"];
       h = [":append-output ~/.nix-profile/bin/home-manager-homefile" "collapse_selection" "insert_at_line_end"];
       p = [":append-output ~/.nix-profile/bin/home-manager-programs" "collapse_selection" "insert_at_line_end"];
+      e = [":append-output ~/.nix-profile/bin/home.file-executable" "collapse_selection" "insert_at_line_end"];
     };
     keys.normal."space" = {
       y = ["extend_line_below" ":clipboard-yank"];
@@ -134,6 +136,8 @@ programs.helix = {
     };
     keys.insert = {
       C-s = "kill_to_line_start";
+      C-down = "copy_selection_on_next_line";
+      C-up = "copy_selection_on_prev_line";
     };
   };
 };

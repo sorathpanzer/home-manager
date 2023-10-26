@@ -26,10 +26,8 @@ home.file = {
     export FZF_DEFAULT_COMMAND="find -L $HOME/.config $HOME/.local/bin -maxdepth 4 -path $HOME/.nix-defexpr -prune -o -type d"
 
     PATH="$PATH:$HOME/.local/bin"
-    PATH="$PATH:$HOME/.local/bin/dblocks"
-    PATH="$PATH:$HOME/.local/bin/lfx"
-    PATH="$PATH:$HOME/.local/bin/utils"
-    PATH="$PATH:$HOME/.local/bin/flatpaks"
+    PATH="$PATH:$HOME/.local/bin/hyprland"
+    PATH="$PATH:$HOME/.local/bin/apps"
     eval $( dircolors -b $HOME/.config/dir_colors )
 
     if [ "$(tty)" = "/dev/tty1" ]; then
