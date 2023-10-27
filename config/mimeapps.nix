@@ -14,6 +14,9 @@ xdg.mimeApps = {
     "x-scheme-handler/tg"="userapp-Telegram Desktop-ZZSVU1.desktop";
     "x-scheme-handler/about"="librewolf.desktop";
     "x-scheme-handler/unknown"="librewolf.desktop";
+    "text/html" = "librewolf.desktop";
+    "x-scheme-handler/http" = "librewolf.desktop";
+    "x-scheme-handler/https" = "librewolf.desktop";
   };
 };
 }

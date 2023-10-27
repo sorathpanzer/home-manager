@@ -31,7 +31,7 @@ open = [
 	{ exec = 'start "%1"', orphan = true, desc = "Open", for = "windows" }
 ]
 img = [
-	{ exec = 'hyprimv "$@"',             desc = "Open", for = "linux" },
+	{ exec = 'hyprimv "$@" &',             desc = "Open", for = "linux" },
 ]
 reveal = [
 	{ exec = 'open -R "$1"',                       desc = "Reveal", for = "macos" },

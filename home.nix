@@ -14,11 +14,21 @@
   home.packages = with pkgs; [
   hyprland waybar imv fzf keepassxc wl-clipboard tofi git OVMF dunst yazi pulseaudio
   qutebrowser-qt6 python310Packages.adblock python39Packages.pip python39Packages.six
-  swaylock
+
+  gcc gnumake btrfs-progs ntfs3g openssh light lm_sensors pandoc poppler_utils
+  ffmpeg ffmpegthumbnailer groff imagemagick file zip killall fd marksman
+  virt-manager spice libvirt bridge-utils
+  wayland-protocols ydotool hyprpicker usbutils yt-dlp ripgrep lzop lf ghostscript
+  librewolf popcorntime libreoffice-still tdesktop fragments signal-desktop logseq
+  whatsapp-for-linux swaylock xdg-user-dirs 
+  #appimage-run android-udev-rules android-file-transfer android-tools
+  #wineWowPackages.waylandFull
+  
   ];
 
   home.sessionVariables = {
     EDITOR = "hx";
+    BROWSER = "librewolf";
   };
 
   programs.home-manager.enable = true;
