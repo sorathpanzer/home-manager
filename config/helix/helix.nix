@@ -147,6 +147,13 @@ home.file = {
     [[language]]
     name = "bash"
     language-server = { command = "${pkgs.nodePackages.bash-language-server}/bin/bash-language-server", args = ["start"] }
+
+    [[language]]
+name = "markdown"
+indent = { tab-width = 4, unit = "    " }
+file-types = ["md", "markdown"]
+roots = [".git"]
+language-server = { command = "marksman", args=["server"], language-id = "markdown" }
 '';
 };
 

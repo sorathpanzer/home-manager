@@ -28,6 +28,7 @@ home.file = {
     PATH="$PATH:$HOME/.local/bin"
     PATH="$PATH:$HOME/.local/bin/hyprland"
     PATH="$PATH:$HOME/.local/bin/apps"
+    PATH="$PATH:$HOME/.config/emacs/bin"
     eval $( dircolors -b $HOME/.config/dir_colors )
 
     if [ "$(tty)" = "/dev/tty1" ]; then

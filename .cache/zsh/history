@@ -1,0 +1,39 @@
+: 1698961901:0;home-manager generations | less
+: 1698961938:0;home-manager switch id100
+: 1698961945:0;home-manager switch "id 100"
+: 1698961952:0;man home-manager
+: 1698961987:0;home-manager switch --help
+: 1698962128:0;home-manager switch 100
+: 1698962142:0;home-manager switch generation
+: 1698962150:0;home-manager switch --help | less
+: 1698962193:0;home-manager generations
+: 1698962209:0;home-manager generations "id 100"
+: 1698962459:0;sudo reboot
+: 1698961681:3;home-manager switch
+: 1698961702:19;ya
+: 1698961722:2;home-manager switch
+: 1698961746:0;home-manager list
+: 1698961753:0;home-manager --list
+: 1698961759:0;home-manager --generations
+: 1698961760:0;home-manager --generation
+: 1698961769:0;home-manager --help
+: 1698961783:0;home-manager generations
+: 1698961821:0;home-manager --help
+: 1698961834:0;home-manager generations
+: 1698961881:5;home-manager switch | less
+: 1698961886:0;zsh
+: 1698962533:0;home-manager switch 
+: 1698962542:0;sudo reboot
+: 1698962597:0;home-manager switch 
+: 1698962612:0;sudo reboot
+: 1698966233:0;home-manager switch 
+: 1698966334:0;sudo reboot
+: 1698967876:0;home-manager switch --flake .
+: 1698967912:2;home-manager switch -f ~/.dotfiles/users/home.nix
+: 1698967961:3;ya
+: 1698967971:0;home-manager switch
+: 1698968658:0;cp -r /etc/nixos ./
+: 1698968660:0;ya
+: 1698969467:0;home-manager switch
+: 1699042689:3082;ya
+: 1699045775:0;tig

@@ -22,6 +22,7 @@ programs.zsh = {
     dua="${pkgs.dua}/bin/dua i";
     grep="grep -i";
     gparted="sudo -E gparted";
+    ex="emacsclient -c -a 'emacs'";
   };
 };
 
